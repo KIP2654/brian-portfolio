@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brian Langat — Portfolio</title>
+  <style>
+    :root {
+      --bg:#0f172a; --panel:#111827; --ink:#e5e7eb; --muted:#9ca3af; --accent:#60a5fa;
+      --chip:#1f2937; --card:#0b1220; --border:#1f2937;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+           background: radial-gradient(1200px 1200px at 20% -10%, #0b1733, #0a0f1e 50%, #070b13 100%); color: var(--ink); }
+    .wrap { max-width: 980px; margin: 40px auto; padding: 0 20px; }
+    header { display:flex; flex-wrap:wrap; gap:8px 20px; align-items:flex-start; justify-content:space-between; }
+    h1 { margin:0; font-size: 2.2rem; letter-spacing:.3px; }
+    .sub { color: var(--muted); margin-top:6px; }
+    .links a { color: var(--accent); text-decoration: none; margin-right:14px; }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
+            border: 1px solid var(--border); border-radius: 14px; padding:16px 18px; margin:14px 0; }
+    h2 { margin: 6px 0 10px; font-size:1.15rem; color:#e8eefc; letter-spacing:.2px; }
+    ul { margin:8px 0 0 20px; }
+    .grid { display:grid; grid-template-columns: repeat(12, 1fr); gap:14px; }
+    .col-6 { grid-column: span 6; } .col-12 { grid-column: span 12; }
+    .kvs { display:grid; grid-template-columns: 140px 1fr; gap:8px; }
+    .table { width:100%; border-collapse: collapse; }
+    .table th, .table td { padding:10px; border-bottom:1px solid var(--border); vertical-align: top; }
+    .chip { display:inline-block; background: var(--chip); padding:6px 10px; border-radius: 999px; margin: 4px 6px 0 0; border:1px solid var(--border); }
+    footer { color: var(--muted); font-size: .9rem; margin: 20px 0 40px; }
+    @media (max-width: 820px) {
+      .grid { grid-template-columns: 1fr; }
+      .col-6 { grid-column: span 1; }
+      .kvs { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Brian Langat</h1>
+        <div class="sub">Technology & Cloud Enthusiast — Nairobi, Kenya</div>
+        <div class="links">
+          <a href="mailto:brian.langat@example.com">brian.langat@example.com</a>
+          <a href="tel:+2547XXXXXXXX">+254 7xx xxx xxx</a>
+          <a href="https://linkedin.com/in/brianlangat" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://brianlangat.dev" target="_blank" rel="noopener">Portfolio</a>
+          <a href="Brian_Langat_Portfolio.pdf" target="_blank" rel="noopener">Download PDF</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Professional Summary</h2>
+      <p>Technology & Cloud enthusiast with hands‑on experience in AWS, networking, and data analytics.
+         Passionate about building scalable solutions and clear dashboards. Currently completing a BSc in Computer Science.</p>
+    </section>
+
+    <div class="grid">
+      <section class="card col-6">
+        <h2>Technical Skills</h2>
+        <div class="kvs">
+          <div>Cloud</div><div>AWS (S3, EC2, IAM), Azure fundamentals</div>
+          <div>Networking</div><div>OSI model, routing/switching, IP addressing, subnets</div>
+          <div>Data Analysis</div><div>Excel, PivotTables, dashboards</div>
+          <div>Web</div><div>HTML, CSS, JavaScript, Node.js, Firebase</div>
+          <div>Tools</div><div>Git/GitHub, Windows, macOS, Linux</div>
+        </div>
+      </section>
+
+      <section class="card col-6">
+        <h2>Education</h2>
+        <div><strong>BSc in Computer Science (Ongoing)</strong> — The East African University</div>
+        <div>Focus: Web Apps, Cloud, Networking, Data Analytics</div>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Projects</h2>
+      <div class="card">
+        <strong>Personal Budgeting Web Application</strong> — HTML, CSS, JavaScript, Node.js, Firebase, Chart.js
+        <ul>
+          <li>Personal finance tracker with secure per‑user data and real‑time updates.</li>
+          <li>Reports and charts for spending trends via Chart.js.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>AWS S3 File Storage Simulation</strong> — AWS Console, S3, IAM
+        <ul>
+          <li>Bucket policies, access control (public/private), lifecycle policies.</li>
+          <li>Static website hosting via S3 and object versioning.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>Excel Data Analytics Project</strong> — Microsoft Excel
+        <ul>
+          <li>Interactive dashboards using PivotTables and LOOKUP functions.</li>
+          <li>Automated regional performance summaries.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Experience & Training</h2>
+      <div class="card">
+        <strong>Outbound Services Representative</strong> — Jamii Telecommunications Ltd (Faiba)
+        <ul>
+          <li>Managed customer interactions, upselling internet services and resolving client issues.</li>
+          <li>Maintained high call performance metrics and client satisfaction scores.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>Training & Workshops</strong>
+        <ul>
+          <li>Ruijie Networks — Fundamentals</li>
+          <li>WOBI — Change Management Workshop (2025)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Certifications</h2>
+      <table class="table">
+        <thead><tr><th>Certificate</th><th>Issuer</th><th>Date</th><th>Verification</th></tr></thead>
+        <tbody>
+          <tr><td>Introduction to Data Analysis using Microsoft Excel</td><td>Coursera Project Network</td><td>Oct 5, 2025</td><td><a href="https://coursera.org/verify/JHCGBQ9QL4YL" target="_blank">Verify</a></td></tr>
+          <tr><td>AWS S3 Basics</td><td>Coursera</td><td>Oct 15, 2024</td><td><a href="https://coursera.org/verify/X395LJLHNREY" target="_blank">Verify</a></td></tr>
+          <tr><td>Introduction to Networking (NVIDIA)</td><td>Coursera (Authorized by NVIDIA)</td><td>Oct 15, 2024</td><td><a href="https://coursera.org/verify/WHI8T5S51UAU" target="_blank">Verify</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>© 2025 Brian Langat — Built with HTML/CSS. Replace placeholders with your real contacts before publishing.</footer>
+  </div>
+</body>
+</html>
